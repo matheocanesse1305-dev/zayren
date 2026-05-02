@@ -198,10 +198,8 @@ section { padding: 90px 40px; }
 }
 
 .section-num { font-family: 'Lora', serif; font-size: 0.8rem; color: var(--gold); letter-spacing: 0.2em; }
-
 .section-title { font-family: 'Lora', serif; font-size: clamp(1.7rem, 3.5vw, 2.8rem); font-weight: 400; }
 .section-title em { font-style: italic; color: var(--gold); }
-
 .section-divider { flex: 1; height: 1px; background: var(--border); }
 
 /* YT GRID */
@@ -236,6 +234,7 @@ section { padding: 90px 40px; }
   display: flex; align-items: center; justify-content: center;
   background: rgba(0,0,0,0.3);
   opacity: 0; transition: opacity 0.3s;
+  text-decoration: none;
 }
 
 .yt-card:hover .yt-play-icon { opacity: 1; }
@@ -248,20 +247,13 @@ section { padding: 90px 40px; }
   text-transform: uppercase; padding: 4px 10px;
 }
 
-.yt-views {
-  position: absolute; bottom: 10px; left: 10px;
-  background: rgba(8,8,8,0.82); border: 1px solid var(--border);
-  color: var(--gold-light); font-size: 0.65rem; letter-spacing: 0.1em;
-  padding: 3px 9px;
-}
-
 .yt-hint {
-  position: absolute; bottom: 10px; left: 0; right: 0;
+  position: absolute; bottom: 0; left: 0; right: 0;
   text-align: center; font-size: 0.6rem; letter-spacing: 0.15em;
   text-transform: uppercase; color: var(--gold);
   opacity: 0; transition: opacity 0.3s;
   background: linear-gradient(to top, rgba(8,8,8,0.7), transparent);
-  padding: 10px 0 6px;
+  padding: 14px 0 8px;
 }
 
 .yt-card:hover .yt-hint { opacity: 1; }
@@ -275,19 +267,15 @@ section { padding: 90px 40px; }
 .yt-card.open .yt-info { max-height: 600px; padding: 20px 22px; }
 
 .yt-client { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
-
 .yt-project-title { font-family: 'Lora', serif; font-size: 1.1rem; margin-bottom: 14px; line-height: 1.35; }
-
 .yt-brief-block { border-left: 2px solid var(--gold-dim); padding-left: 12px; margin-bottom: 14px; }
 .yt-brief-label { font-size: 0.56rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 4px; }
 .yt-brief-text { font-size: 0.8rem; color: var(--gray); line-height: 1.7; font-weight: 300; }
-
 .yt-review-block { background: rgba(201,168,76,0.05); border: 1px solid var(--border); padding: 14px; margin-top: 10px; }
 .yt-review-label { font-size: 0.56rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
 .yt-review-text { font-family: 'Lora', serif; font-style: italic; font-size: 0.92rem; color: var(--white); line-height: 1.6; }
 .yt-stars { display: flex; gap: 3px; margin-top: 7px; }
 .yt-stars span { color: var(--gold); font-size: 0.75rem; }
-
 .yt-link {
   display: inline-flex; align-items: center; gap: 7px;
   margin-top: 16px; font-size: 0.66rem; letter-spacing: 0.18em;
@@ -331,8 +319,6 @@ section { padding: 90px 40px; }
   text-transform: uppercase; padding: 4px 10px;
 }
 
-.tk-views { position: absolute; bottom: 12px; right: 10px; font-size: 0.68rem; color: var(--gold-light); }
-
 .tk-hint {
   position: absolute; bottom: 0; left: 0; right: 0;
   text-align: center; font-size: 0.56rem; letter-spacing: 0.15em;
@@ -360,7 +346,6 @@ section { padding: 90px 40px; }
 .tk-review-block { background: rgba(201,168,76,0.05); border: 1px solid var(--border); padding: 12px; }
 .tk-review-label { font-size: 0.54rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 5px; }
 .tk-review-text { font-family: 'Lora', serif; font-style: italic; font-size: 0.86rem; color: var(--white); line-height: 1.55; }
-
 .tk-link {
   display: inline-flex; align-items: center; gap: 6px;
   margin-top: 13px; font-size: 0.63rem; letter-spacing: 0.18em;
@@ -399,7 +384,6 @@ section { padding: 90px 40px; }
 }
 
 .contact-left .big-text em { font-style: italic; color: var(--gold); }
-
 .contact-left p { margin-top: 20px; font-size: 0.84rem; font-weight: 300; color: var(--gray); line-height: 1.8; max-width: 360px; }
 
 .contact-right { display: flex; flex-direction: column; gap: 12px; }
@@ -410,7 +394,6 @@ section { padding: 90px 40px; }
 }
 
 .contact-item:hover { border-color: var(--gold-dim); background: rgba(201,168,76,0.03); }
-
 .contact-item-label { font-size: 0.58rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
 .contact-item-value { font-size: 0.95rem; }
 .contact-item a { color: var(--white); text-decoration: none; transition: color 0.3s; }
@@ -502,10 +485,9 @@ footer p { font-size: 0.62rem; letter-spacing: 0.1em; color: #444; }
     <div class="yt-grid">
 
 ```
-  <!-- VIDEO 1 : oT21P0GKKpU -->
   <div class="yt-card" onclick="toggleCard(this)">
     <div class="yt-thumb-wrap">
-      <img class="yt-thumb" src="https://img.youtube.com/vi/oT21P0GKKpU/maxresdefault.jpg" alt="Projet FLC" onerror="this.src='https://placehold.co/640x360/111/c9a84c?text=Miniature'">
+      <img class="yt-thumb" src="https://img.youtube.com/vi/oT21P0GKKpU/maxresdefault.jpg" alt="Projet 1" onerror="this.src='https://placehold.co/640x360/111/c9a84c?text=Miniature'">
       <a href="https://youtu.be/oT21P0GKKpU" target="_blank" onclick="event.stopPropagation()" class="yt-play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></a>
       <div class="yt-badge">YouTube</div>
       <div class="yt-hint">Cliquer pour le brief · ▶ pour voir</div>
@@ -526,7 +508,6 @@ footer p { font-size: 0.62rem; letter-spacing: 0.1em; color: #444; }
     </div>
   </div>
 
-  <!-- VIDEO 2 : sE8SGMikN6A -->
   <div class="yt-card" onclick="toggleCard(this)">
     <div class="yt-thumb-wrap">
       <img class="yt-thumb" src="https://img.youtube.com/vi/sE8SGMikN6A/maxresdefault.jpg" alt="Projet 2" onerror="this.src='https://placehold.co/640x360/111/c9a84c?text=Miniature'">
@@ -550,7 +531,6 @@ footer p { font-size: 0.62rem; letter-spacing: 0.1em; color: #444; }
     </div>
   </div>
 
-  <!-- VIDEO 3 : L0nPR2Rl72E -->
   <div class="yt-card" onclick="toggleCard(this)">
     <div class="yt-thumb-wrap">
       <img class="yt-thumb" src="https://img.youtube.com/vi/L0nPR2Rl72E/maxresdefault.jpg" alt="Projet 3" onerror="this.src='https://placehold.co/640x360/111/c9a84c?text=Miniature'">
@@ -574,7 +554,6 @@ footer p { font-size: 0.62rem; letter-spacing: 0.1em; color: #444; }
     </div>
   </div>
 
-  <!-- VIDEO 4 : StvZH_YU6Ww -->
   <div class="yt-card" onclick="toggleCard(this)">
     <div class="yt-thumb-wrap">
       <img class="yt-thumb" src="https://img.youtube.com/vi/StvZH_YU6Ww/maxresdefault.jpg" alt="Projet 4" onerror="this.src='https://placehold.co/640x360/111/c9a84c?text=Miniature'">
@@ -584,10 +563,10 @@ footer p { font-size: 0.62rem; letter-spacing: 0.1em; color: #444; }
     </div>
     <div class="yt-info">
       <div class="yt-client">Client — Winordie</div>
-      <div class="yt-project-title">J'ARRACHE PANDOU en 1V1 ?!🤣 | Ft @Pandou_.</div>
+      <div class="yt-project-title">J'ARRACHE PANDOU en 1V1 ?! 🤣 | Ft @Pandou_.</div>
       <div class="yt-brief-block">
         <div class="yt-brief-label">Brief client</div>
-        <div class="yt-brief-text">Revanche du 1v1 live avec Pandou. Édits sur les kills et balles de snipe, compteur de points custom, masquer les vulgarités (miaulement pour Pandou). Ambiance dynamique et drôle, mettre en valeur les moments forts ET les fails. Outro dans le même style que la dernière vidéo.</div>
+        <div class="yt-brief-text">Revanche du 1v1 live avec Pandou. Édits sur les kills et balles de snipe, compteur de points custom, masquer les vulgarités (miaulement pour Pandou). Ambiance dynamique et drôle, moments forts ET fails mis en valeur. Outro dans le même style que la dernière vidéo.</div>
       </div>
       <div class="yt-review-block">
         <div class="yt-review-label">Avis client</div>
@@ -598,7 +577,6 @@ footer p { font-size: 0.62rem; letter-spacing: 0.1em; color: #444; }
     </div>
   </div>
 
-  <!-- VIDEO 5 : n7Tx_SJibEQ -->
   <div class="yt-card" onclick="toggleCard(this)">
     <div class="yt-thumb-wrap">
       <img class="yt-thumb" src="https://img.youtube.com/vi/n7Tx_SJibEQ/maxresdefault.jpg" alt="Projet 5" onerror="this.src='https://placehold.co/640x360/111/c9a84c?text=Miniature'">
@@ -611,7 +589,7 @@ footer p { font-size: 0.62rem; letter-spacing: 0.1em; color: #444; }
       <div class="yt-project-title">Résumé cup UNREAL (Pov Saylaz)</div>
       <div class="yt-brief-block">
         <div class="yt-brief-label">Brief client</div>
-        <div class="yt-brief-text">Résumé immersif d'une cup UNREAL en POV Saylaz. Mettre en valeur les moments clés, les clutchs et les kills. Montage énergique avec sound design soigné pour retranscrire l'intensité de la compétition.</div>
+        <div class="yt-brief-text">Résumé immersif d'une cup UNREAL en POV Saylaz. Mettre en valeur les moments clés, clutchs et kills. Montage énergique avec sound design soigné pour retranscrire l'intensité de la compétition.</div>
       </div>
       <div class="yt-review-block">
         <div class="yt-review-label">Avis client</div>
@@ -641,7 +619,6 @@ footer p { font-size: 0.62rem; letter-spacing: 0.1em; color: #444; }
       <img class="tk-thumb" src="https://placehold.co/405x720/111/c9a84c?text=TikTok" alt="TikTok 1">
       <div class="tk-overlay"></div>
       <div class="tk-badge">TikTok</div>
-      <div class="tk-views">2.4M vues</div>
       <div class="tk-hint">Cliquer →</div>
     </div>
     <div class="tk-info">
@@ -653,7 +630,7 @@ footer p { font-size: 0.62rem; letter-spacing: 0.1em; color: #444; }
       </div>
       <div class="tk-review-block">
         <div class="tk-review-label">Avis client</div>
-        <div class="tk-review-text">"2M de vues sur la première vidéo. Incroyable."</div>
+        <div class="tk-review-text">"Résultat dingue, exactement ce que je voulais. Merci !"</div>
       </div>
       <a href="https://tiktok.com" target="_blank" class="tk-link" onclick="event.stopPropagation()">Voir →</a>
     </div>
@@ -664,7 +641,6 @@ footer p { font-size: 0.62rem; letter-spacing: 0.1em; color: #444; }
       <img class="tk-thumb" src="https://placehold.co/405x720/111/c9a84c?text=TikTok" alt="TikTok 2">
       <div class="tk-overlay"></div>
       <div class="tk-badge">TikTok</div>
-      <div class="tk-views">890K vues</div>
       <div class="tk-hint">Cliquer →</div>
     </div>
     <div class="tk-info">
@@ -687,7 +663,6 @@ footer p { font-size: 0.62rem; letter-spacing: 0.1em; color: #444; }
       <img class="tk-thumb" src="https://placehold.co/405x720/111/c9a84c?text=TikTok" alt="TikTok 3">
       <div class="tk-overlay"></div>
       <div class="tk-badge">TikTok</div>
-      <div class="tk-views">1.1M vues</div>
       <div class="tk-hint">Cliquer →</div>
     </div>
     <div class="tk-info">
@@ -710,7 +685,6 @@ footer p { font-size: 0.62rem; letter-spacing: 0.1em; color: #444; }
       <img class="tk-thumb" src="https://placehold.co/405x720/111/c9a84c?text=TikTok" alt="TikTok 4">
       <div class="tk-overlay"></div>
       <div class="tk-badge">TikTok</div>
-      <div class="tk-views">3.7M vues</div>
       <div class="tk-hint">Cliquer →</div>
     </div>
     <div class="tk-info">
@@ -722,7 +696,7 @@ footer p { font-size: 0.62rem; letter-spacing: 0.1em; color: #444; }
       </div>
       <div class="tk-review-block">
         <div class="tk-review-label">Avis client</div>
-        <div class="tk-review-text">"3.7M vues, j'ai gagné 80K followers en une semaine."</div>
+        <div class="tk-review-text">"Super travail, le timing est parfait. Merci beaucoup !"</div>
       </div>
       <a href="https://tiktok.com" target="_blank" class="tk-link" onclick="event.stopPropagation()">Voir →</a>
     </div>
@@ -740,8 +714,8 @@ footer p { font-size: 0.62rem; letter-spacing: 0.1em; color: #444; }
       <div class="section-divider"></div>
     </div>
     <div class="trust-grid">
-      <a href="https://x.com/FLCclan" target="_blank" class="trust-badge">
-        <span class="trust-x">𝕏</span><span>@FLCclan</span>
+      <a href="https://x.com/FLCclan_" target="_blank" class="trust-badge">
+        <span class="trust-x">𝕏</span><span>@FLCclan_</span>
       </a>
       <a href="https://x.com/Winordie_wod" target="_blank" class="trust-badge">
         <span class="trust-x">𝕏</span><span>@Winordie_wod</span>
@@ -782,7 +756,6 @@ footer p { font-size: 0.62rem; letter-spacing: 0.1em; color: #444; }
     function closeMenu() {
       document.getElementById('navLinks').classList.remove('open');
     }
-
     function toggleCard(card) {
       const wasOpen = card.classList.contains('open');
       card.closest('.yt-grid, .tiktok-grid')
@@ -790,7 +763,6 @@ footer p { font-size: 0.62rem; letter-spacing: 0.1em; color: #444; }
         .forEach(c => c.classList.remove('open'));
       if (!wasOpen) card.classList.add('open');
     }
-
     const observer = new IntersectionObserver(entries => {
       entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
@@ -798,7 +770,6 @@ footer p { font-size: 0.62rem; letter-spacing: 0.1em; color: #444; }
         }
       });
     }, { threshold: 0.08 });
-
     document.querySelectorAll('.yt-card, .tk-card').forEach(el => observer.observe(el));
   </script>
 
